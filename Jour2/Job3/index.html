@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur de clics</title>
+</head>
+
+<body>
+    <!-- Bouton avec l'ID "button" -->
+    <button id="button">Cliquez-moi</button>
+
+    <!-- Paragraphe avec l'ID "compteur" et contenu initial "0" -->
+    <p id="compteur">0</p>
+
+    <!-- Script JavaScript pour incrémenter le compteur -->
+    <script>
+        let counter = 0; // Initialisation du compteur
+
+        // Écouteur d'événement pour le clic sur le bouton
+        document.getElementById('button').addEventListener('click', function () {
+            counter += 1; // Incrémentation du compteur
+            document.getElementById('compteur').textContent = counter; // Mise à jour du contenu du paragraphe
+        });
+    </script>
+</body>
+
+</html>
