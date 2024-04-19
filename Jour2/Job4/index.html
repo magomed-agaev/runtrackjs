@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="Writing" id="keylogger" cols="30" rows="10"></textarea>
+    <script>// Sélectionner l'élément textarea par son ID
+        const textarea = document.getElementById("keylogger");
+
+        // Écouter l'événement de frappe de touche
+        document.addEventListener("keydown", (event) => {
+            // Obtenir la touche pressée
+            const key = event.key.toLowerCase();
+
+            // Ajouter la touche au textarea
+            textarea.value += key;
+
+            // Si le focus est dans le textarea, ajouter la touche à nouveau
+            if (document.activeElement === textarea) {
+                textarea.value += key;
+            }
+        });
+    </script>
+</body>
+
+</html>
