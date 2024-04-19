@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>const footer = document.getElementById("myFooter");
+
+        // Écoutez l'événement de défilement (scroll)
+        window.addEventListener("scroll", () => {
+            // Calculez le pourcentage de défilement
+            const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+            // Changez la couleur du footer en fonction du pourcentage de défilement
+            if (scrollPercentage < 25) {
+                footer.style.backgroundColor = "#f0f0f0"; // Couleur initiale
+            } else if (scrollPercentage < 50) {
+                footer.style.backgroundColor = "#ffeecc"; // Couleur intermédiaire
+            } else {
+                footer.style.backgroundColor = "#ff9999"; // Couleur finale
+            }
+        });</script>
+</body>
+
+</html>
